@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "aht20_controller.h": "c",
+        "devicetree.h": "c",
+        "i2c_controller.h": "c",
+        "printk.h": "c",
+        "i2c.h": "c",
+        "kernel.h": "c",
+        "device.h": "c"
+    }
+}
