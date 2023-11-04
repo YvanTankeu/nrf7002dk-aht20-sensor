@@ -1,9 +1,23 @@
+/**
+ * @file main.c
+ *
+ * @brief Projet de capteur AHT20 utilisant Zephyr RTOS et le SDK Nordic Semiconductor
+ *
+ * Ce projet utilise Zephyr RTOS et le SDK Nordic Semiconductor pour interagir
+ * avec le capteur AHT20 via une communication I2C. Le capteur mesure l'humidité
+ * relative et la température et affiche ces données. Le projet est destiné à une
+ * utilisation sur la carte nRF7002DK équipée d'un nRF5340 SoC.
+ *
+ * Auteur : Yvan Tankeu
+ *
+ * Date de création : 02-11-2023
+ */
+
 #include <zephyr/kernel.h>
 #include <zephyr/device.h>
 #include <zephyr/devicetree.h>
 #include <zephyr/sys/printk.h>
 #include <zephyr/drivers/i2c.h>
-
 #include "aht20_controller.h"
 #include "i2c_controller.h"
 
@@ -17,20 +31,11 @@ int main(void)
         float humidity, temperature;
 
         ret = init_i2c_device(&dev_i2c);
-        if (ret == 0)
+        if (ret != 0)
         {
-                // I2C initialization successful, you can continue with other operations.
-                printk("I2C initialization successful!\n");
-
-                // ... Rest of your code ...
-        }
-        else
-        {
-                // Handle the error appropriately.
                 printk("I2C initialization failed!\n");
-
-                // ... Handle the error ...
         }
+        printk("I2C initialization successful!\n");
 
         while (1)
         {

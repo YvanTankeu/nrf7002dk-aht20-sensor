@@ -34,7 +34,6 @@ void wait_for_idle(const struct i2c_dt_spec *dev_i2c, uint8_t status_reg)
     }
 }
 
-
 int perform_calibration(const struct i2c_dt_spec *dev_i2c) {
     uint8_t data, cmd[3];
     int ret;
@@ -80,7 +79,6 @@ int trigger_measurement(const struct i2c_dt_spec *dev_i2c) {
 
 void read_sensor_data(const struct i2c_dt_spec *dev_i2c, float *humidity, float *temperature)
 {
-    // Les données du capteur AHT20 sont lues ici
     uint8_t hdata[6];
     int ret;
 
