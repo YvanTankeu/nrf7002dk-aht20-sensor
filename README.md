@@ -59,6 +59,11 @@ PS: Si vous n'avez pas de PSU vous pouvez connecter le vin de votre module adafr
 3. Assurez-vous que l'alimentation de la carte est correctement branchée.
    
 ## Résultat
+Apres le televersement
+
+![image](https://github.com/YvanTankeu/nrf7002dk-aht20-sensor/assets/25055874/2d9ea534-c354-4925-92d6-c7956184187f)
+
+Moniteur serie
 
 ![image](https://github.com/YvanTankeu/nrf7002dk-aht20-sensor/assets/25055874/86d98410-4c16-4e5a-8de9-e5ddb96db58d)
 
